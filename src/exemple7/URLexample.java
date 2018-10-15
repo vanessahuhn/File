@@ -11,7 +11,7 @@ import java.net.URL;
 public class URLexample {
 
 	public static void main(String[] args) throws IOException, MalformedURLException {
-		// TODO Auto-generated method stub
+		// lire une ligne d'un fichier texte sur un site distant
 		URL webURL = new URL("https://www.sample-videos.com/text/Sample-text-file-10kb.txt");
 		
 		BufferedReader line = new BufferedReader (new InputStreamReader(webURL.openStream()));

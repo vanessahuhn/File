@@ -8,7 +8,7 @@ import java.io.ObjectOutputStream;
 public class Exemple4 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		//écrire un objet dans un fichier
 		FileOutputStream fos;
 		try {
 			fos = new FileOutputStream("MonZoo.ser");

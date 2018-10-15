@@ -7,11 +7,10 @@ public class Exemple3 {
 	public static void main(String[] args) {
 		// créer un objet représentant un fichier existant
 		File f = new File("MonFichier.txt");
-
 		// créer un répertoire
 		File rep = new File("MonRepertoire");
 		rep.mkdir();
-
+		
 		// lister le contenu d'un répertoire
 
 		if (rep.isDirectory()) {

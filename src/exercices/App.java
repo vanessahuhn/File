@@ -8,9 +8,9 @@ public class App {
 		// TODO Auto-generated method stub
 		Client[] myClients = new Client[3];
 
-		Client client1 = new Client("Bob", "Morane", 12);
-		Client client2 = new Client("Bruce", "Wayne", 3);
-		Client client3 = new Client("Corben", "Dallas", 18);
+		Client client1 = new Client("Morane", "Bob", 12);
+		Client client2 = new Client("Wayne", "Bruce", 3);
+		Client client3 = new Client("Dallas", "Corben", 18);
 
 		myClients[0] = client1;
 		myClients[1] = client2;
@@ -20,12 +20,15 @@ public class App {
 
 		try {
 			WFichierClient.ecrire(myClients, myFile);
-			WFichierClient.lire(myFile);
+			for(Client client : RFichierClient.lire(myFile))
+			{
+				System.out.println(client);
+			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		
 	}
 
 }

@@ -23,23 +23,5 @@ public class WFichierClient {
 		}
 		bw.close();
 	}
-	
-	public static void lire(String myFile) {
-		try {
-		BufferedReader br = new BufferedReader (
-				new FileReader(
-						new File(myFile)));
-		String ligne;
-		
-			while ((ligne = br.readLine()) != null) {
-				System.out.println(ligne);
-			}
-			br.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-	}	
 
 }

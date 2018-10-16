@@ -1,6 +1,3 @@
-12:Morane:Bob
-
-3:Wayne:Bruce
-
-18:Dallas:Corben
-
+12:Bob:Morane
+3:Bruce:Wayne
+18:Corben:Dallas

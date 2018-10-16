@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class URLexample {
+public class Exemple7 {
 
 	public static void main(String[] args) throws IOException, MalformedURLException {
 		// lire une ligne d'un fichier texte sur un site distant

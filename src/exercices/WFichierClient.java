@@ -1,7 +1,9 @@
-package exercice1;
+package exercices;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -22,6 +24,24 @@ public class WFichierClient {
 		}
 		bw.close();
 	}
+	
+	public static void lire(String myFile) {
+		try {
+		BufferedReader br = new BufferedReader (
+				new FileReader(
+						new File(myFile)));
+		String ligne;
+		
+			while ((ligne = br.readLine()) != null) {
+				System.out.println(ligne);
+			}
+			br.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -39,6 +59,7 @@ public class WFichierClient {
 		
 		try {
 			ecrire(myClients, myFile);
+			lire(myFile);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

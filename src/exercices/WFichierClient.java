@@ -20,7 +20,6 @@ public class WFichierClient {
 						new File(myFile)));
 		for (Client client : myClients) {
 			bw.write(client.toString());
-			bw.write("\n");
 		}
 		bw.close();
 	}

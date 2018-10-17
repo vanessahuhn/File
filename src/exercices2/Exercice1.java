@@ -26,51 +26,51 @@ public class Exercice1 {
 	}
 
 	public static String calculMoyenne() {
-				
+
 		double moyenne = 0;
 		String moyenneArrondie = "0";
 		DecimalFormat df = new DecimalFormat(".##");
-		
+
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Entrez un nombre entre 0 et 20 : ");
 		String line;
 		int nb;
 		double total = 0;
 		int iterations = 0;
-		
+
 		while ((line = sc.nextLine()).equals("fini") == false) {
-		
-		sc = new Scanner(System.in);
-		System.out.print("Entrez un nombre entre 0 et 20 : ");
-			
-		if (isInteger(line)) {
-			nb = Integer.parseInt(line);
-			if (nb >= 0 && nb <= 20) {
-				total += nb;
-				iterations ++;
-			}	
-		}
-		else {
-			System.out.println("Veuillez entrer un nombre valide.");
-		}
+
+			System.out.print("Entrez un nombre entre 0 et 20 : ");
+
+			if (isInteger(line)) {
+				nb = Integer.parseInt(line);
+				if (nb >= 0 && nb <= 20) {
+					total += nb;
+					iterations++;
+				}
+			} else {
+				System.out.println("Veuillez entrer un nombre valide.");
+			}
 		}
 		if (iterations != 0) {
 			moyenne = total / iterations;
 			moyenneArrondie = df.format(moyenne);
 			return moyenneArrondie;
 		}
-		
+
 		else
+			System.out.println("Entrez au moins une note.");
 			return "0";
-		
-		
+
 	}
-		
-	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("La moyenne est de " + calculMoyenne());
+		String moyenneFinale = "0";
+		while (moyenneFinale == "0") {
+			moyenneFinale = calculMoyenne();
+		}
+		System.out.println("La moyenne est de " + moyenneFinale);
 	}
 
 }

@@ -1,0 +1,46 @@
+package exercices2;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+
+
+public class Exercice3 {
+
+	public static void copie(String filenameFrom, String filenameTo) throws IOException {
+		
+		BufferedReader br = new BufferedReader(new FileReader(new File(filenameFrom)));
+		BufferedWriter bw = new BufferedWriter(new FileWriter(new File(filenameTo)));
+		String line;
+		String delimiter = "/" + "*";
+		
+		while ((line = br.readLine()) != null) {
+			
+			if (line.trim().startsWith("//"))
+				System.out.println("commentaire //");
+			
+			else if (line.contains(delimiter)) {
+				System.out.println("début delimiter");
+				while (!((br.readLine()).contains("*/"))) {
+				}
+				System.out.print("fin delimiter");
+			}
+			else {
+				bw.write(line + "\n");
+			}
+
+		}
+		br.close();
+		bw.close();
+	}
+
+	public static void main(String[] args) throws IOException {
+		copie(System.getProperty("user.dir") + "/src//exercices2//Exercice3.java",
+				System.getProperty("user.dir") + "/src//exercices2//copie.txt");
+	}
+
+}
